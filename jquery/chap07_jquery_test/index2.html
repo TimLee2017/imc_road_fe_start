@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery test</title>
+</head>
+<body>
+<ul>
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+</ul>
+
+<script src="./vendor/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function(event){
+        console.log($('li')[0]);
+        console.log($('li').get(2));
+        console.log($('li').get(-2));
+        console.log($('li').length ===5);
+    });
+</script>
+    
+</body>
+</html>

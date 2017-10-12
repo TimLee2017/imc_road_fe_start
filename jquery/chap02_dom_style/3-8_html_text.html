@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    
+</head>
+<body>
+<ul>
+    <li class="item1">item-1</li>
+    <li class="item2">item-2</li>
+    <li class="item3">item-3</li>
+    <li class="item4">item-4</li>
+    <li class="item5">item-5</li>
+    <li class="item6">item-6</li>
+    <li class="item7">item-7</li>
+    <li class="item8">item-8</li>
+    <li class="item9">item-9</li>
+</ul>
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var elements = $('li')
+        // console.log(elements.html())    // html只能获取一个
+        // console.log(elements.text())    
+
+        // console.log(elements.html('<strong>test</strong>'))
+        // console.log(elements.text('<strong>test</strong>'))
+
+        // security
+        console.log(elements.eq(0).html('<script>alert("warning!")<\/script>'))
+
+
+
+    })
+</script>
+
+</body>
+</html>

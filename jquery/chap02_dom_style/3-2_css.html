@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <style>
+        .box { width:100px; height: 100px; background-color: #ccc}
+        .red { background-color: red; }
+        .b10 { border: 10px solid #000; }
+        .m10 { margin: 10px; }
+        .p10 { padding: 10px; }
+        .hide { display: none; }
+    </style>
+</head>
+<body>
+<div class="box" id="demo">div</div>
+
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var element = $('#demo')
+        element.css('width', 200);
+        element.css({
+            // 'background-color': 'red',
+            backgroundColor: 'red',
+            height: 200,
+            marginTop: 100,
+            border: '10px solid #000',
+            width: '-=100'
+        })
+
+        element.css('height', function(index, value){
+            console.log(value);
+            // return parseInt(value, 10) + 75 + 'px';
+            return parseInt(value, 10) + 50
+        })
+
+        console.log(element.css(['height', 'width', 'border']))
+
+        element.css('background-color', 'green')
+
+    })
+</script>
+
+</body>
+</html>

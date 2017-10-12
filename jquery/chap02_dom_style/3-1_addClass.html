@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <style>
+        .box { width:100px; height: 100px; background-color: #ccc}
+        .red { background-color: red; }
+        .b10 { border: 10px solid #000; }
+        .m10 { margin: 10px; }
+        .p10 { padding: 10px; }
+        .hide { display: none; }
+    </style>
+</head>
+<body>
+<div class="box hide" id="demo">div</div>
+<ul>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+</ul>
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var element = $('#demo')
+        // 直接增加
+        // element.addClass('red b10 m10 p10')
+
+        // 用函数 return 增加，index是同类型元素的index
+        // element.addClass(function(index, className){
+        //     console.log(index)
+        //     console.log(className)
+        //     return 'red'
+        // })
+
+        // element.removeClass(function(index, className){
+        //     console.log(index)
+        //     console.log(className)
+        //     return 'box'
+        // })
+
+
+        // 批量操作
+        // $('li').addClass('red')
+
+        // 判断
+        // if(element.hasClass('hide')) {
+        //     element.removeClass('hide')
+        // } else {
+        //     element.addClass('hide')
+        // }
+
+        // toggleClass 是上面代码的简写
+        // element.toggleClass('hide')
+
+        // $('li').each(function(index){
+        //     $(this).toggleClass('red', index % 3 === 1)
+        // })
+
+        element.toggleClass('hide red')
+
+
+    })
+</script>
+
+</body>
+</html>

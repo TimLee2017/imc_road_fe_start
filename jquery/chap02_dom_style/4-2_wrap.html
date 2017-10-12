@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tempore nobis id ex cumque, deleniti, aliquam natus iste. Rem, necessitatibus, nisi labore placeat quia minima molestiae cum sint pariatur corrupti.</p>
+
+<div class="item"></div>
+
+<a href="#">link1</a>
+<a href="#">link2</a>
+<a href="#">link3</a>
+<a href="#">link4</a>
+<a href="#">link5</a>
+<a href="#">link6</a>
+<a href="#">link7</a>
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        // var element = $('p')
+        // element.wrap('<div class="box"></box>')
+        // element.wrap($('.item'))
+
+        // var elements = $('a')
+        // // elements.wrap('<p></p>')
+        // elements.wrapAll('<p class="outer"></p>')
+
+        var element = $('p')
+        element.wrap($('.item'))
+        element.unwrap()
+    })
+</script>
+
+</body>
+</html>

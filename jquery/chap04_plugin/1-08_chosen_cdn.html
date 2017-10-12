@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/chosen/1.8.2/chosen.min.css">
+</head>
+
+<body>
+    <select name="demo" id="demo" style="width: 300px">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <br><br>
+
+    <select name="demo2" id="demo2" multiple data-placeholder="请选择...">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+
+    <script src="../../vendor/jquery-1.12.4.js"></script>
+    <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.min.js"></script>
+    <script>
+    $(function() {
+        $('#demo').chosen()
+        $('#demo2').chosen({
+            width: '20%'
+        })
+    });
+    </script>
+</body>
+
+</html>

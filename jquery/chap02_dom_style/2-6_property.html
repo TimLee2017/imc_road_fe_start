@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+</head>
+
+<body>
+    <img src="logo.jpg" 
+         id="logo" 
+         alt="jQuery logo" 
+         class="img-jquery" 
+         title="jQuery logo" />
+
+    <img src="logo.jpg" 
+         id="logo2" 
+         alt="jQuery logo2" 
+         class="img-jquery2" 
+         title="jQuery logo2" />
+
+    <input type="checkbox" 
+           id="check" 
+           tabindex="1" 
+           style="width:50px; height: 50px;" 
+           title="Check this!" 
+           description="just a checkbox"  />
+
+    <script src="../../vendor/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var checkbox = $('#check')
+            // console.log(checkbox.prop('checked'))
+            // console.log(checkbox.checked)
+            // console.log(checkbox.get(0).checked)    // 转化成js对象
+            // console.log(checkbox.attr('checked'))
+
+            var img = $('img')
+            // console.log(img.prop('class'))      // 不需要写成 className
+            // console.log(img.prop('className'))      
+            // console.log(img.prop('tabindex'))      
+            // console.log(img.get(0).tabIndex)      
+
+
+            // 设置
+            console.log(checkbox.prop('tabindex', 2))
+            console.log(checkbox.prop('checked', true))
+
+            checkbox.removeProp('title')
+            console.log(checkbox.title)
+        })
+    </script>
+
+</body>
+
+</html>

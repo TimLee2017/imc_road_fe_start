@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+</head>
+
+<body>
+    <img src="logo.jpg" 
+         id="logo" 
+         alt="jQuery logo" 
+         class="img-jquery" 
+         title="jQuery logo" 
+         data-id="1" 
+         data-data-1="html data1"/>
+
+    <img src="logo.jpg" 
+         id="logo2" 
+         alt="jQuery logo2" 
+         class="img-jquery2" 
+         title="jQuery logo2" 
+         data-id="2" 
+         data-data2="html data2"/>
+
+    <input type="checkbox" 
+           id="check" 
+           tabindex="1" 
+           style="width:50px; height: 50px;" 
+           title="Check this!" 
+           description="just a checkbox"  />
+
+    <script src="../../vendor/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var checkbox = $('#check')
+            var img = $('img')
+            // console.log(checkbox.data('lastDesc', 'some desc'))
+            // console.log(checkbox.data('lastDesc'))
+            // console.log(checkbox.data('last-desc'))
+
+            // checkbox.data('Last-desc', {
+            //     foo: 'bar'
+            // })
+
+            // checkbox.data('Last-desc2', {
+            //     foo: 'bar'
+            // })
+
+            // console.log(checkbox.data('LastDesc'))
+            // console.log(checkbox.data())    // 返回全部的数据 data 
+            // console.log(img.data())    // 只能获取第一个
+
+            // img.data('data1', 'new data1')
+            // console.log(img.data())
+            // console.log(img.data('data-1'))
+
+            // console.log(img.removeData('data1'))
+            // console.log(img.data())
+
+            // 删除多个
+            img.data({
+                data1: 'data1',
+                data2: 'data2',
+                data3: 'data3',
+            })
+
+            console.log(img.data())
+
+            // console.log(img.removeData('data1 data2'))
+            // console.log(img.removeData(['data1', 'data2']))
+            console.log(img.data())
+
+            console.log($.hasData(img.get(0)))
+
+
+        })
+    </script>
+
+</body>
+
+</html>

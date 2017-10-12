@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+</head>
+<body>
+<img src="logo.jpg" id="logo" alt="jQuery logo" class="img-jquery"
+ title="jQuery logo" />
+
+<input type="checkbox" id="check" 
+       tabindex="1" style="width:50px; height: 50px;" 
+       title="Check this!" description="just a checkbox" checked="true" />
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+       
+        var checkbox = document.getElementById('check')
+        // 设置属性 property
+        // checkbox.title = 'new title';
+
+        // 设置特性 attribute
+        // checkbox.setAttribute('title', 'another title') 
+
+        // console.log(checkbox.getAttribute('title'))
+        // console.log(checkbox.title)
+        // console.log(checkbox.title === checkbox.getAttribute('title'))
+
+        // 规则1：如果attributes是本来在DOM对象中就存在的，attributes和properties会同步
+
+        // 规则2：如果attributes是本来在DOM对象中就存在的，但是类型是Boolean，
+        // 那么attributes和properties不会同步
+        // console.log(checkbox.checked)
+        // console.log(checkbox.getAttribute('checked'))
+
+        // // checkbox.checked = false
+
+        // // console.log(checkbox.checked)
+        // // console.log(checkbox.getAttribute('checked'))
+
+
+        // checkbox.setAttribute('checked', 'false')
+
+        // console.log(checkbox.checked)
+        // console.log(checkbox.getAttribute('checked'))
+
+        // 规则3：如果attributes不是DOM对象内建的属性，attributes和properties的值不会同步
+        // 内建：比如description不是内建的
+
+        // checkbox.description = 'new description'
+
+        // console.log(checkbox.description)
+        // console.log(checkbox.getAttribute('description'))
+
+        // checkbox.setAttribute('description', 'another description')
+
+        // console.log(checkbox.description)
+        // console.log(checkbox.getAttribute('description'))
+
+
+        var img = document.getElementById('logo')
+
+        // console.log(img.src)
+        // console.log(img.getAttribute('src'))
+
+        // img.src = '../logo.jpg'
+        // console.log(img.src)
+        // console.log(img.getAttribute('src'))
+
+        console.log(img.class)  // class 不能作为属性名，因为是保留字
+        console.log(img.className)
+        console.log(img.getAttribute('class'))
+
+
+
+
+    })
+</script>
+
+</body>
+</html>

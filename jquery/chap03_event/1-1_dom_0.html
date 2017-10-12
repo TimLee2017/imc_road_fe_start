@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <p id="example" onclick="console.log('Click')">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Facere laudantium ratione quisquam libero porro nemo, eos obcaecati 
+        a dicta nisi culpa veritatis provident, commodi. Maiores quibusdam 
+        quod pariatur harum ipsam!
+    </p>
+    <div id="p1">
+        <div id="p1-1">
+            <div id="p1-1-1">
+                <div id="p1-1-1-1">
+                    <p>
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. 
+                        Veritatis perspiciatis eaque minus 
+                        dolorum dolorem aperiam provident 
+                        sequi velit iure, libero laborum ad 
+                        iusto, debitis, nihil blanditiis repellat 
+                        laudantium ut quia.
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. 
+                        Laboriosam animi alias, iste saepe 
+                        molestias sit perspiciatis at accusamus 
+                        tempora eaque accusantium. Quam delectus 
+                        harum, odit sed dolorum incidunt dicta commodi?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../../vendor/jquery-1.12.4.js"></script> -->
+    <script>
+        document.getElementById('example').onclick = function(event){
+            console.log('Click me!')
+        }
+
+        document.getElementById('example').onclick = function(event){
+            event = event || window.event;
+            console.log('Click me2!')
+        }
+
+        document.getElementById('p1').onclick = function(event){
+            event = event || window.event;
+            console.log('Click p1!')
+        }
+
+        document.getElementById('p1-1').onclick = function(event){
+            event = event || window.event;
+            console.log('Click p1-1!')
+        }
+
+        document.getElementById('p1-1-1').onclick = function(event){
+            event = event || window.event;
+            console.log('Click p1-1-1!')
+        }
+
+        document.getElementById('p1-1-1-1').onclick = function(event){
+            event = event || window.event;
+            // event.stopPropagation();
+            event.cancelBubble = true
+            console.log('Click p1-1-1-1!')
+        }
+    </script>
+</body>
+</html>

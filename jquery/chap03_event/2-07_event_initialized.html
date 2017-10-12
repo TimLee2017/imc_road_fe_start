@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+    <div id="p1">
+        <div id="p1-1">
+            <div id="p1-1-1">
+                <div id="p1-1-1-1">
+                    <p>
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. 
+                        Veritatis perspiciatis eaque minus 
+                        dolorum dolorem aperiam provident 
+                        sequi velit iure, libero laborum ad 
+                        iusto, debitis, nihil blanditiis repellat 
+                        laudantium ut quia.
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. 
+                        Laboriosam animi alias, iste saepe 
+                        molestias sit perspiciatis at accusamus 
+                        tempora eaque accusantium. Quam delectus 
+                        harum, odit sed dolorum incidunt dicta commodi?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../vendor/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('div').on('click', function(event){
+                // event.stopPropagation()
+                event.stopImmediatePropagation()
+                console.log('clicked %o', $(this))
+            }).on('click', function(event){
+                console.log('clicked2 %o', $(this))
+            })
+        });
+
+    </script>
+</body>
+</html>

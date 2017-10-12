@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    
+</head>
+<body>
+    <form>
+        <p><input type="text" name="text"></p>
+        <p>
+            <input type="radio" name="radio" value="1">radio1</input>
+            <input type="radio" name="radio" value="2">radio2</input>
+        </p>
+        <p>
+            <input type="checkbox" name="checkbox" value="1">checkbox1</input>
+            <input type="checkbox" name="checkbox" value="2">checkbox2</input>
+        </p>
+        <p>
+            <select name="select" style="width: 200px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </p>
+        <p>
+            <select name="multiSelect" multiple="" style="width: 200px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </p>
+    </form>
+    
+
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        // 文本框
+        console.log($('[name="text"]').val())
+
+        // console.log($('[name="text"]').val('asdf')) // 设置
+
+        // 单选框
+        console.log($('[name="radio"]:checked').val())
+        // console.log($('[name="radio"]').val(['2']))     // 设置，需要用数组.
+
+        // 下拉选择框
+        // console.log($('[name="select"]').val())
+        console.log($('[name="select"] option:selected').val())
+        //console.log($('[name="select"]').val('2')) // 设置值
+
+        // 多选下拉选择框
+        console.log($('[name="multiSelect"]').val())
+        $('[name="multiSelect"]').val([1,2])        // 设置用数组
+
+        // checkbox  遍历，用map把值变成数组
+        console.log(
+            $('[name="checkbox"]:checked').map(function(){
+                return $(this).val()
+            }).toArray()
+        );
+
+        $('[name="checkbox"]').val([1,2])
+        
+    })
+</script>
+
+</body>
+</html>

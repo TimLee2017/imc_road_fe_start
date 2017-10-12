@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <style>
+        .box { width:100px; height: 100px; background-color: #ccc}
+        .red { background-color: red; }
+        .b10 { border: 10px solid #000; }
+        .m10 { margin: 10px; }
+        .p10 { padding: 10px; }
+        .hide { display: none; }
+    </style>
+</head>
+<body>
+<div class="box" id="demo">div</div>
+
+
+<script src="../../vendor/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var element = $('#demo')
+
+        element.css({
+            width: 100,
+            height: 100,
+            border: '10px solid #000',
+            margin: 20,
+            padding: 10,
+        })
+
+        element.css('height', function(index, value){
+            return parseInt(value, 10) + 50;
+        })
+
+        console.log(element.width())
+        console.log(element.height())
+        
+        console.log(element.innerWidth())
+        console.log(element.innerHeight())
+                
+        console.log(element.outerWidth())
+        console.log(element.outerHeight())
+
+        // 传入 true 包含外边距
+        console.log(element.outerWidth(true))
+        console.log(element.outerHeight(true))
+    })
+</script>
+
+</body>
+</html>
