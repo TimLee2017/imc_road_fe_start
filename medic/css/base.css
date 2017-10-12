@@ -102,12 +102,14 @@ select, input {
     background-color: #fafafa;
 }
 
+.banner-help .caption,
 .banner-search .caption {
     height: 22px;
     padding: 15px 0 15px 0;
     text-align: center;
 }
 
+.banner-help .caption .text,
 .banner-search .caption .text {
     display: inline-block;
     height: 22px;
@@ -150,6 +152,26 @@ select, input {
     font-size: 14px;
     color: #fff;
     border-radius: 3px;
+}
+
+.banner-help {
+    background-color: #fafafa;
+}
+
+.banner-help .caption .text {
+    color: #00b3ea;
+    background-position: 0 -23px;
+}
+
+.banner-help .link {
+    color: #00b3ea;
+    display: inline-block;
+    width: 86px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 0 8px 26px;
 }
 
 
