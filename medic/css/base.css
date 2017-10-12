@@ -8,8 +8,9 @@ a {
     text-decoration: none;
 }
 
-select {
+select, input {
     border: none;
+    outline: none;
 }
 
 
@@ -136,6 +137,26 @@ select {
     padding: 2px 0;
     color: #666;
 }
+
+.banner-search .submit {
+    height: 32px;
+    text-align: center;
+}
+
+.banner-search .submit .button {
+    width: 108px;
+    height: 33px;
+    background-color: #fecd09;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+
+
+
+
+
 
 
 
