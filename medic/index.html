@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-ch">
 
 <head>
     <meta charset="UTF-8">
@@ -51,28 +51,56 @@
         </div>
     </div>
     <div id="banner" class="banner">
-        <div class="banner-slider"></div>
+        <div class="banner-slider ui-slider">
+            <div class="ui-slider-wrap">
+                <a href="#0" class="item"><img src="img/banner_1.jpg" alt="banner_1"></a>                
+                <a href="#0" class="item"><img src="img/banner_2.jpg" alt="banner_2"></a>                
+                <a href="#0" class="item"><img src="img/banner_3.jpg" alt="banner_3"></a>                
+            </div>
+            <div class="ui-slider-arrow">
+                <a href="#l" class="item left">&nbsp;</a>
+                <a href="#r" class="item right">&nbsp;</a>
+            </div>
+            <div class="ui-slider-process">
+                <a href="#0" class="item item_focus">&nbsp;</a>
+                <a href="#1" class="item">&nbsp;</a>
+                <a href="#2" class="item">&nbsp;</a>
+            </div>
+        </div>
         <div class="banner-search">
             <div class="caption"><span class="text">快速预约</span></div>
-            <div class="form">
+            <div class="form ui-cascading">
                 <div class="line">
-                    <select name="area">
-                        <option value="">医院地区</option>
+                    <select 
+                        name="area" 
+                        data-search="getDistinctArea" 
+                        data-where=""> 
+                        <option>医院地区</option>
                     </select>
                 </div>
                 <div class="line">
-                    <select name="level">
-                        <option value="">医院等级</option>
+                    <select 
+                        name="level" 
+                        data-search="getLevelByArea" 
+                        data-where="">
+                        <option>医院等级1</option>
+                        
                     </select>
                 </div>
                 <div class="line">
-                    <select name="name">
-                        <option value="">医院名称</option>
+                    <select 
+                        name="name"   
+                        data-search="getNameByAreaAndLevel" 
+                        data-where="">
+                        <option>医院名称2</option>
                     </select>
                 </div>
                 <div class="line">
-                    <select name="department">
-                        <option value="">医院科室</option>
+                    <select 
+                        name="department" 
+                        data-search="getDepartmentArrByHospitalName" 
+                        data-where="">
+                        <option>医院科室3</option>
                     </select>
                 </div>
                 <div class="submit">
@@ -112,46 +140,52 @@
                             <a href="#1" class="block-caption-item">其他</a>
                         </div>
                         <div class="block-content">
-                            <div class="block-list clearfix">
-                                <div class="item">
-                                    <img src="img/hospital-1.jpg" alt="xx医院" />
-                                    <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-                                    <div class="item-phone">电话：东院咨询台：010-69155564..</div>
-                                    <div class="item-address">【东院】 
-                                    北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
+                            <div class="block-wrap">
+                                <div class="block-list clearfix">
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" />
+                                        <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
+                                        <div class="item-phone">电话：东院咨询台：010-69155564..</div>
+                                        <div class="item-address">【东院】 北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" />
+                                        <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
+                                        <div class="item-phone">电话：东院咨询台：010-69155564..</div>
+                                        <div class="item-address">【东院】 北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" />
+                                        <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
+                                        <div class="item-phone">电话：东院咨询台：010-69155564..</div>
+                                        <div class="item-address">【东院】 北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" />
+                                        <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
+                                        <div class="item-phone">电话：东院咨询台：010-69155564..</div>
+                                        <div class="item-address">【东院】 北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
+                                    </div>
                                 </div>
-                                <div class="item">
-                                    <img src="img/hospital-1.jpg" alt="xx医院" />
-                                    <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-                                    <div class="item-phone">电话：东院咨询台：010-69155564..</div>
-                                    <div class="item-address">【东院】 
-                                    北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
+                                <div class="block-text-list clearfix">
+                                    <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
+                                    <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
+                                    <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
+                                    <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
+                                    <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
+                                    <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
                                 </div>
-                                <div class="item">
-                                    <img src="img/hospital-1.jpg" alt="xx医院" />
-                                    <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-                                    <div class="item-phone">电话：东院咨询台：010-69155564..</div>
-                                    <div class="item-address">【东院】 
-                                    北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
-                                </div>
-                                <div class="item">
-                                    <img src="img/hospital-1.jpg" alt="xx医院" />
-                                    <div class="item-name">北京协和医院<span class="item-level">【三级甲等】</span></div>
-                                    <div class="item-phone">电话：东院咨询台：010-69155564..</div>
-                                    <div class="item-address">【东院】 
-                                    北京市东城区帅府园一号 【西院】北京市西城区大木仓...</div>
-                                </div>
+                                <a href="#" class="block-more">更多医院</a>
                             </div>
-
-                            <div class="block-text-list clearfix">
-                                <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
-                                <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
-                                <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
-                                <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
-                                <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
-                                <a href="#9" class="item">首都儿科研究所附属儿童医院<span class="level">【三级甲等】</span></a>
+                            <div class="block-wrap" style="display: none;">
+                                东城区内容
                             </div>
-                            <a href="#" class="block-more">更多医院</a>
+                            <div class="block-wrap" style="display: none;">
+                                西城区内容
+                            </div>
+                            <div class="block-wrap" style="display: none;">
+                                其他城区内容
+                            </div>
                         </div>
                     </div>
                     <div class="item" style="display: none;">科室内容</div>
@@ -184,8 +218,8 @@
     <div id="footer" class="footer">
         Copyright &copy; 2017慕课网版权所有
     </div>
-
     <script src="./js/ui.js"></script>
+    <script src="./js/data.js"></script>
 </body>
 
 </html>
